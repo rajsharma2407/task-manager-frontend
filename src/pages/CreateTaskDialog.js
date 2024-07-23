@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from '@mui/material';
 
-export default function CreateTaskDialog({ open, onClose, onSave }) {
+export default function CreateTaskDialog({ open, onClose, onCreate }) {
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
 
   const handleSave = () => {
     if (taskTitle.trim()) {
-      onSave({ title: taskTitle, description: taskDescription });
+      onCreate({ title: taskTitle, description: taskDescription });
       setTaskTitle('');
       setTaskDescription('');
       onClose();
