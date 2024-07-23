@@ -51,7 +51,7 @@ export default function Profile() {
           navigate('/login');
           return;
         }
-        const response = await fetch(`http://localhost:8080/users/${email}`, {
+        const response = await fetch(`https://main--cleartasks.netlify.app/users/${email}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ export default function Profile() {
     formData.append('avatar', file);
 
     try {
-      const response = await fetch('http://localhost:8080/users/upload-avatar', {
+      const response = await fetch('https://main--cleartasks.netlify.app/users/upload-avatar', {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -108,7 +108,7 @@ export default function Profile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/users/${form.email}`, {
+      const response = await fetch(`https://main--cleartasks.netlify.app/users/${form.email}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

@@ -49,7 +49,7 @@ export default function Login() {
   useEffect(() => {
     const checkUserAuth = async () => {
       try {
-        const response = await fetch('http://localhost:8080/users/check-auth', {
+        const response = await fetch('/users/check-auth', {
           method: 'GET',
           credentials: 'include',
         });
@@ -76,7 +76,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/users/login', {
+      const response = await fetch('https://main--cleartasks.netlify.app/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

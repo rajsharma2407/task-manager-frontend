@@ -45,7 +45,7 @@ export default function TaskBoard() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:8080/tasks');
+      const response = await fetch('https://main--cleartasks.netlify.app/tasks');
       const data = await response.json();
       const groupedTasks = {
         todo: [],
@@ -78,7 +78,7 @@ export default function TaskBoard() {
     });
 
     try {
-      await fetch(`http://localhost:8080/tasks/${movedTask.taskId}`, {
+      await fetch(`https://main--cleartasks.netlify.app/tasks/${movedTask.taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
