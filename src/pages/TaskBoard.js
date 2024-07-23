@@ -1,6 +1,6 @@
 // src/pages/TaskBoard.js
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from '@mui/material';
+import { Box, Typography} from '@mui/material';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { styled } from '@mui/material/styles';
 import TaskDetailsDialog from './TaskDetailsDialog';
