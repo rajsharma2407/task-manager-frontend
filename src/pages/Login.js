@@ -76,7 +76,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://main--cleartasks.netlify.app/users/login', {
+      const response = await fetch('https://task-manager-backend-u5xn.onrender.com/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
